@@ -20,7 +20,7 @@ var data = require( 'datasets-male-first-names-us-frequency' );
 
 #### data
 
-A data [`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with keys corresponding to all the names given to children born in the United States in the period from `1880-2014`. All names are in lower-case letters. For each name, an [`array-of-arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) is exported with birth frequencies for each year. For years in which less than *five* children with a certain name were born, no data is available.
+A data [`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with keys corresponding to all the names given to *male* children born in the United States in the period from `1880-2014`. All names are in lower-case letters. For each name, an [`array-of-arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) is exported with birth frequencies for each year. For years in which less than *five* children with a certain name were born, no data is available.
 
 ``` javascript
 // Retrieve data for the name "Kaden"
