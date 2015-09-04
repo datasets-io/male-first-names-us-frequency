@@ -1,10 +1,10 @@
 'use strict';
 
-var frequencies = require( './../lib' ),
+var freq = require( './../lib/herbert.json' ),
 	i;
 
-console.log( 'Frequencies for name `Herbert` from 1950 to 2000: ' );
+console.log( 'Frequencies for name `Herbert`' );
 
-for( i = 1950; i <= 2000; i++ ) {
-	console.log( 'Year: ' + i + '; Count: ' + frequencies[ 'Herbert' ][ i ] );
+for( i = 0; i < freq.length; i++ ) {
+	console.log( 'Year: ' + freq[ i ][ 0 ] + '; Count: ' + freq[ i ][ 1 ] );
 }

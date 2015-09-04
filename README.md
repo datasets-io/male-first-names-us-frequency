@@ -15,23 +15,45 @@ $ npm install datasets-male-first-names-us-frequency
 ## Usage
 
 ``` javascript
-var foo = require( 'datasets-male-first-names-us-frequency' );
+var data = require( 'datasets-male-first-names-us-frequency' );
 ```
 
-#### foo()
+#### data
 
-What does `foo` do?
+A data [`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with keys corresponding to all the names given to children born in the United States in the period from `1880-2014`. For each name, an [`array-of-arrays`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) is exported with birth frequencies for each year. For years in which less than *five* children with a certain name were born, no data is available.
 
 ``` javascript
-foo()
-// returns `undefined`
+// Retrieve data for the name "Kaden"
+data.kaden
+/*
+	[
+		[1977,5],
+		[1980,5],
+		[1982,6],
+		(...),
+		[2012,2939],
+		[2013,2617],
+		[2014,2440]
+	]
+*/
 ```
 
+### Reference
+
+The original data was collected by the [Social Security Administration](http://www.ssa.gov/oact/babynames/) and is based on Social Security card applications for births that occurred in the United States after 1879. Since this data is based on government documents, it should be considered public domain.
 
 ## Examples
 
 ``` javascript
-var foo = require( 'datasets-male-first-names-us-frequency' );
+// Frequencies for name `Herbert`
+var freq,
+ 	i;
+
+freq = require('datasets-male-first-names-us-frequency/lib/herbert.json' );
+
+for( i = 0; i < freq.length; i++ ) {
+	console.log( 'Year: ' + freq[ i ][ 0 ] + '; Count: ' + freq[ i ][ 1 ] );
+}
 ```
 
 To run the example code from the top-level application directory,
